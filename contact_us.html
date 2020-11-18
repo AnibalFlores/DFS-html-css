@@ -1,0 +1,120 @@
+<!--
+ISPC
+Curso: Desarrollador Full Stack 2020
+Aula/Sala: A 
+Alumno: Flores, Aníbal H.
+Email:  floresanibal@yahoo.com.ar
+Practico Nro.: 1
+Fecha de entrega: 18/11/2020
+Tema: "Colección de figuritas de fútbol" -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contactenos</title>
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+	<!-- Additonal StyleSheet for form -->
+	<link rel="stylesheet" type="text/css" href="./css/form.css" media="all">
+	<!-- Inner Style -->
+	<style>
+		#footer {
+			clear: both;
+			color: #424242;
+			text-align: center;
+			width: 100%;
+			padding-bottom: 15px;
+			font-size: 85%;
+		}
+
+		#licence.a {
+			color: white;
+			background-color: transparent;
+		}
+	</style>
+</head>
+
+<body>
+
+	<section>
+		<nav id="menu">
+			<ul>
+				<li><a href="index.html" title="Pagina Principal">Inicio</a></li>
+				<li><a href="gallery.html" title="Galeria de figuritas">Galería</a></li>
+				<li><a href="contact_us.html" title="Formulario de contácto">Contáctenos</a></li>
+			</ul>
+		</nav>
+	</section>
+
+	<div id="form_container" style="top: 10px;">
+
+
+		<form class="contactform" method="post" action="">
+			<div>
+				<h1>Contacto</h1>
+				<p>Siéntase libre de consultarnos. Estamos necesitando de usted.</p>
+			</div>
+			<ul>
+
+				<li id="li_1">
+					<label class="description">Nombres y Apellidos </label>
+					<span>
+						<input class="element text large" maxlength="255" size="60" value="" />
+						<label>Nombres *</label>
+					</span>
+					<span>
+						<input class="element text large" maxlength="255" size="60" value="" />
+						<label>Apellidos *</label>
+					</span>
+				</li>
+				<li id="li_2">
+					<label class="description">Email * </label>
+					<div>
+						<input class="element text large" type="email" maxlength="255" value="" />
+					</div>
+				</li>
+				<li class="section_break">
+					<h3>Asunto</h3>
+				</li>
+				<li id="li_4">
+					<label class="description">Mensaje </label>
+					<div>
+						<textarea class="element textarea medium"></textarea>
+					</div>
+				</li>
+				<li>
+					<label class="description">Opciones </label>
+					<span>
+						<input class="element checkbox" type="checkbox" value="1" />
+						<label class="choice">Recibir correo de novedades</label>
+						<input class="element checkbox" type="checkbox" value="1" />
+						<label class="choice">Unirme al club de coleccionistas</label>
+						<input class="element checkbox" type="checkbox" value="1" />
+						<label class="choice">Acepto Licencia y Condiciones *</label>
+					</span>
+				</li>
+
+				<li class="buttons">
+					<input class="button_text" type="submit" name="submit" value="Enviar" />
+				</li>
+				<li class="section_break">
+					<footer id="footer">
+						<p>* Indica campos obligatorios. (Formulario sólo de ejemplo, validaciones no implementadas)</p>
+					</footer>
+				</li>
+			</ul>
+		</form>
+
+	</div>
+	<img id="bottom" src="./images/bottom.png" alt="">
+	<footer class="footer">
+		<p>Aníbal H. Flores - <span class="copyleft" /> <span class="copyrigth" /> 2020 | Resolución mínima 1024 x 768 |
+			<a href="LICENSE" id="licence" class="a">Licencia, Terminos y Condiciones</a>
+		</p>
+	</footer>
+
+</body>
+
+</html>

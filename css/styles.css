@@ -1,5 +1,16 @@
 
-    @font-face {
+/*
+ISPC
+Curso: Desarrollador Full Stack 2020
+Aula/Sala: A 
+Alumno: Flores, Aníbal H.
+Email:  floresanibal@yahoo.com.ar
+Practico Nro.: 1
+Fecha de entrega: 18/11/2020
+Tema: "Colección de figuritas de fútbol" */
+
+/* Fonts Definitions */
+  @font-face {
       font-family: Montserrat;
       src: url('./fonts/Montserrat-Light.ttf');
       font-display: swap;
@@ -61,25 +72,30 @@
     font-style: italic;
 }
 
+/** HTML elements **/
 body
 {
-	background: #ddc050;
+  background: #ddc050;
+  background-image: url("../images/old_paper.jpg");
 	font-family: Montserrat;
 	font-size: 14px;
-	width: 1440px;
+	width: 1024px;
 	margin: auto;
 }
 
 table, th, td {
+  border: none;
   padding: 8px;
   margin: 0%;
 }
 
 .normal{
-    text-align: justify;
-    font-family: Montserrat;
-    font-weight: 500;
-    color: black;
+  background-color: rgba(255, 228, 196, 0.575);
+  text-align: justify;
+  font-family: Montserrat;
+  font-weight: 500;
+  padding: 2%;
+  color: black;
 }
 
 .bold{
@@ -101,7 +117,7 @@ table, th, td {
 }
 
 .large{
-  width: 25%
+  width: 28%
 }
 
 .small{
@@ -116,10 +132,42 @@ table, th, td {
 }
 
 .footer{
+  background-color: rgba(0, 0, 0, 0.486);
     text-align: center;
     font-style: italic;
+    font-size: small;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: darkslategrey   
+    color: white;
+    height: 40px;
+    padding: 3px;  
+}
+
+/**** Logo Section  *****/
+h1
+{
+	background-color:#503d0471;
+	color: black;
+	margin:0;
+	min-height:0;
+	padding:10px;
+	text-decoration:none;
+	
+}
+
+h1 a
+{
+	
+	display:block;
+	height:100%;
+	min-height:40px;
+	overflow:hidden;
+}
+
+/* Internet Explorer Fix */
+img
+{
+	behavior:url(./iepngfix.htc);
+	border:none;
 }
 
 /* Nav Bar Menu */
@@ -155,7 +203,7 @@ ul {
  .flip-box {
   vertical-align: initial;
   width: 575px;
-  height: 750px;
+  height: 525px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -195,6 +243,23 @@ ul {
 
 .over{
   position: absolute;
+  background-color: #ffffff94;
   top: 8px;
-  left: 16px;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 1%;
+}
+
+.copyleft {
+  display: inline-block;
+  transform: rotateY(180deg);
+}
+
+.copyleft::after {
+  content: "\00a9";
+}
+
+.copyrigth {
+  display: inline-block;
+  transform: rotateY(180deg);
 }
