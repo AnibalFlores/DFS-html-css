@@ -26,5 +26,7 @@ In the following browsers on Microsoft Windows 10
 * Safari for Windows Version 5.1.7 (not working)
 * Opera Version 72.0.3815.378 (working) 
 
+* Added GH Website branch feature
+
 Regards,
 Aníbal H. Flores.-
