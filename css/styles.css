@@ -1,32 +1,118 @@
+
+    @font-face {
+      font-family: Montserrat;
+      src: url('./fonts/Montserrat-Light.ttf');
+      font-display: swap;
+      font-weight: 300;
+  }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url('./fonts/Montserrat-Light.ttf');
+      font-display: swap;
+      font-weight: 300;
+      font-style: italic;
+  }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url('./fonts/Montserrat-Regular.ttf');
+      font-display: swap;
+      font-weight: 400;
+  }
+
+  
+    @font-face {
+      font-family: Montserrat;
+      src: url('./fonts/Montserrat-RegularItalic.ttf');
+      font-display: swap;
+      font-weight: 400;
+      font-style: italic;
+  }
+  
+  @font-face {
+      font-family: Montserrat;
+      src: url('./fonts/Montserrat-SemiBold.ttf');
+      font-display: swap;
+      font-weight: 600;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    src: url('./fonts/Montserrat-SemiBoldItalic.ttf');
+    font-display: swap;
+    font-weight: 600;
+    font-style: italic;
+}
+
+  
+  @font-face {
+      font-family: Montserrat;
+      src: url('./fonts/Montserrat-Bold.ttf');
+      font-display: swap;
+      font-weight: 700;
+  }
+
+  @font-face {
+    font-family: Montserrat;
+    src: url('./fonts/Montserrat-BoldItalic.ttf');
+    font-display: swap;
+    font-weight: 700;
+    font-style: italic;
+}
+
 body
 {
 	background: #ddc050;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: Montserrat;
 	font-size: 14px;
 	width: 1440px;
 	margin: auto;
 }
 
+table, th, td {
+  padding: 8px;
+  margin: 0%;
+}
+
 .normal{
     text-align: justify;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Montserrat;
+    font-weight: 500;
     color: black;
 }
 
 .bold{
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .image{
-    float: left;
-    padding: 2%;
-    width: 300px
+    float: inline-start;
+    width: 100%;
 }
 
-.imageright{
-    float: right;
-    padding: 2%;
-    width: 300px
+.photo{
+  border: 1px solid darkred;
+  border-collapse: collapse;
+  align-items: center;
+  background-color: bisque;
+  width: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.large{
+  width: 25%
+}
+
+.small{
+  width: 10%
+}
+
+.imagefooter{
+  font-weight: lighter;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
 }
 
 .footer{
@@ -35,9 +121,11 @@ body
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: darkslategrey   
 }
+
 /* Nav Bar Menu */
 ul {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Montserrat;
+    font-weight: 600;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -59,5 +147,54 @@ ul {
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: rgb(10, 173, 92);
+    color: black;
+    background-color: rgb(204, 160, 14);
   }
+
+ /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-box {
+  vertical-align: initial;
+  width: 575px;
+  height: 750px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: bisque;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: bisque;
+  transform: rotateY(180deg);
+} 
+
+.over{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
